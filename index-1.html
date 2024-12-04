@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>    
+<style>
+.header {
+
+background-image:linear-gradient(azure,lightblue);
+height:100px;
+width:auto;
+text-align:center;
+font-size:50px;
+color:white;
+font-family:cursive;
+text-shadow: 2px 2px black;
+box-shadow: 0px 10px 10px grey;
+}
+.Body {
+
+border:5px outset;
+font-size:3vw;
+width:auto;
+background-color:white;
+
+color:black;
+line-height:100%;
+font-family:sans-serif;
+radius:5px;
+padding-left:50px;
+l
+}
+.info{
+color:white;
+font-family:cursive;
+text-shadow: 2px 2px black;
+
+background-image:linear-gradient(to right,azure,lightblue);
+
+}
+</style>
+
+</head>
+
+<body bgcolor="azure"
+style="background-image:linear-gradient(1deg,white,lightblue,cornflowerblue);max-width:100%;overflow-x:hidden">
+<div class="header">
+<p>Portfolio Site</p>
+
+</div>
+</br>
+<div class ="Body">
+<button id="colour"
+style="position:absolute;width:150px;height:100px;align:right;right:0px"
+ onclick="f();"
+>Light Mode</button>
+<p class="info" >ABOUT ME</p>
+<p>Hi I am Pranatosh Satpati</p>
+<p>I have recently graduated with BSc Hons in Chemistry</p>
+<p>Currently pursuing BS in data sciences and applications from</p>
+<p> IIT Madras in online mode</p></div>
+</br>
+<div class ="Body">
+<p class="info" >EDUCATION</p>
+<p>BSc Hons in chemistry</p>
+<p>Advanced Diploma in Computer Application</p>
+<p>Pursuing BS in Data Science</p>
+<p>Pursuing MSc Chemistry</p>
+
+</div>
+</br>
+<div class ="Body">
+<p class="info" >SKILLS</p>
+<p>Python , HTML ,CSS ,JavaScript</p>
+<p>Sickit learn , pandas , matplotlib</p>
+<p>Pygame development</p>
+<p>Teaching </p>
+
+</div>
+<p>THANK YOU FOR CHECKING MY SITE</p>
+<script>
+var time=new Date().getHours();
+var mode="Light";
+
+function f(){
+if (document.getElementById("colour").innerHTML=="Light Mode"){
+document.getElementById("colour").style.color="white";
+document.getElementById("colour").style.backgroundColor="black";
+document.getElementById("colour").style.boxShadow="10px 10px 10px white";
+document.getElementById("colour").innerHTML="Dark Mode";
+document.body.style.backgroundImage="linear-gradient(black,grey)";
+var elements=document.getElementsByClassName("Body");
+
+for (let i =0;i<elements.length; i++ ){
+console.log(elements[i]);
+elements[i].style.backgroundImage="linear-gradient(black,grey)";
+elements[i].style.color="white";
+};
+var elements1=document.getElementsByClassName("info");
+
+for (let i =0;i<elements1.length; i++ ){
+console.log(elements1[i]);
+elements1[i].style.backgroundImage="linear-gradient(black,grey)";
+elements1[i].style.color="white";};
+document.getElementsByClassName("header")[0].style.backgroundImage="linear-gradient(1deg,darkblue,cornflowerblue)";
+}
+
+else if(document.getElementById("colour").innerHTML=="Dark Mode"){
+document.getElementById("colour").style.color="black";
+document.getElementById("colour").style.backgroundColor="white";
+document.getElementById("colour").style.boxShadow="10px 10px 10px black";
+document.getElementById("colour").innerHTML="Light Mode";
+document.body.style.backgroundImage="linear-gradient(1deg,white,lightblue,cornflowerblue)";
+var elements=document.getElementsByClassName("Body");
+
+for (let i =0;i<elements.length; i++ ){
+console.log(elements[i]);
+elements[i].style.backgroundImage="linear-gradient(white,white)";
+elements[i].style.color="black";
+var elements1=document.getElementsByClassName("info");
+
+for (let i =0;i<elements1.length; i++ ){
+console.log(elements1[i]);
+elements1[i].style.backgroundImage="linear-gradient(to right,azure,lightblue)";
+};
+document.getElementsByClassName("header")[0].style.backgroundImage="linear-gradient(azure,lightblue)";
+};
+};
+};
+</script>
+
+</body>
+</html>
