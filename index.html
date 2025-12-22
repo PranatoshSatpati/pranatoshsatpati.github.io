@@ -1,131 +1,82 @@
-<!DOCTYPE HTML>
-<html>
-<head>    
-<style>
-.header {
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
 
-background-image:linear-gradient(azure,lightblue);
-height:100px;
-width:auto;
-text-align:center;
-font-size:50px;
-color:white;
-font-family:cursive;
-text-shadow: 2px 2px black;
-box-shadow: 0px 10px 10px grey;
-}
-.Body {
+    <style>
+        .navbar {
+width: 100%;
+           background-image: linear-gradient(to right, rgb(48, 48, 92),rgba(255, 192, 203, 0.432));
+            height: 10vh;
+            color: white;
+            margin-top: 0%;
+            padding-top: 0%;
+            margin-bottom: 0%;
+            padding-bottom: 0%;
+            border-radius: 50px;
+            text-align: center;
+        }
 
-border:5px outset;
-font-size:3vw;
-width:auto;
-background-color:white;
+        .styledHeading{
 
-color:black;
-line-height:100%;
-font-family:sans-serif;
-radius:5px;
-padding-left:50px;
-l
-}
-.info{
-color:white;
-font-family:cursive;
-text-shadow: 2px 2px black;
+            color: azure;
+            text-align: center;
+        }
+        .leftheading{
 
-background-image:linear-gradient(to right,azure,lightblue);
-
-}
-</style>
-
+            color: azure;
+            text-align: left;
+        }
+        .deck{
+            position: absolute;
+            background-color: rgba(240, 255, 255, 0.51);
+            color: cornsilk;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
-
-<body bgcolor="azure"
-style="background-image:linear-gradient(1deg,white,lightblue,cornflowerblue);max-width:100%;overflow-x:hidden">
-<div class="header">
-<p>Portfolio Site</p>
-
+<body style="background-image:linear-gradient(pink,rgb(64, 54, 153) , rgb(39, 32, 97));">
+    <div class="navbar">
+        <br><h2 class="styledHeading">Welcome to my portfolio site</h2>
+       </div>
+<h1 class="styledheading">I am Pranatosh Satpati</h1>
+    <h3 class="styledheading">A dual degree major ,graduate in Chemistry and pursuing BS in data Science from IITM</h3>
+    <hr>
+    <h1 style="background-color: rgba(240, 255, 255, 0.144);" class="styledHeading">Skills</h1>
+    <div class="deck" style="width: 60%;height: 21%;"><h3>Python skills</h3> <hr>
+    <p>Pandas</p>
+<p>Natplotlib</p>
+<p>Flask</p></div>
+<div class="deck" style="left:61%; width: 37%;height: 21%;">
+    <h3>Web dev and JS skills</h3>
+    <hr>
+    <p>CSS and Javascript</p>
+    <p>VueJS front end framework</p>
+    <p>Flask Restful API backend</p>
+</div><div class="deck" style="left:1%; width: 37%;top: 60%;height: 22%;">
+    <h3>Machine Learning skills</h3>
+    <hr>
+    <p>Machine learning with python Scikit learn</p>
+    <p>Tensorflow Keras Deeep learning</p>
+    <p>ML app hosting using streamlit</p>
 </div>
-</br>
-<div class ="Body">
-<button id="colour"
-style="position:absolute;width:150px;height:100px;align:right;right:0px"
- onclick="f();"
->Light Mode</button>
-<p class="info" >ABOUT ME</p>
-<p>Hi I am Pranatosh Satpati</p>
-<p>I have recently graduated with BSc Hons in Chemistry</p>
-<p>Currently pursuing BS in data sciences and applications from</p>
-<p> IIT Madras in online mode</p></div>
-</br>
-<div class ="Body">
-<p class="info" >EDUCATION</p>
-<p>BSc Hons in chemistry</p>
-<p>Advanced Diploma in Computer Application</p>
-<p>Pursuing BS in Data Science</p>
-<p>Pursuing MSc Chemistry</p>
-
+<div class="deck" style="left:39%; width: 37%;top: 60%;height: 22%;">
+    <h3>Writing skils</h3>
+    <hr>
+    <p>Reguler member of IITM Sahitikya Literary Club</p>
+    <p>Proefficient in Emglish and Bengali writing</p>
+    <p>Experienced with writing formal business analysis</p>
+</div><div class="deck" style="left:77%; width: 23%;top: 60%;height: 22%;">
+    <h3>Other skils</h3>
+    <hr>
+    <p>Experienced in Linux and bash script</p>
+    <p>DB Managemet using mysql</p>
+    <p>Completed system threat forecasting ML projet</p>
 </div>
-</br>
-<div class ="Body">
-<p class="info" >SKILLS</p>
-<p>Python , HTML ,CSS ,JavaScript</p>
-<p>Sickit learn , pandas , matplotlib</p>
-<p>Pygame development</p>
-<p>Teaching </p>
-
-</div>
-<p>THANK YOU FOR CHECKING MY SITE</p>
-<script>
-var time=new Date().getHours();
-var mode="Light";
-
-function f(){
-if (document.getElementById("colour").innerHTML=="Light Mode"){
-document.getElementById("colour").style.color="white";
-document.getElementById("colour").style.backgroundColor="black";
-document.getElementById("colour").style.boxShadow="10px 10px 10px white";
-document.getElementById("colour").innerHTML="Dark Mode";
-document.body.style.backgroundImage="linear-gradient(black,grey)";
-var elements=document.getElementsByClassName("Body");
-
-for (let i =0;i<elements.length; i++ ){
-console.log(elements[i]);
-elements[i].style.backgroundImage="linear-gradient(black,grey)";
-elements[i].style.color="white";
-};
-var elements1=document.getElementsByClassName("info");
-
-for (let i =0;i<elements1.length; i++ ){
-console.log(elements1[i]);
-elements1[i].style.backgroundImage="linear-gradient(black,grey)";
-elements1[i].style.color="white";};
-document.getElementsByClassName("header")[0].style.backgroundImage="linear-gradient(1deg,darkblue,cornflowerblue)";
-}
-
-else if(document.getElementById("colour").innerHTML=="Dark Mode"){
-document.getElementById("colour").style.color="black";
-document.getElementById("colour").style.backgroundColor="white";
-document.getElementById("colour").style.boxShadow="10px 10px 10px black";
-document.getElementById("colour").innerHTML="Light Mode";
-document.body.style.backgroundImage="linear-gradient(1deg,white,lightblue,cornflowerblue)";
-var elements=document.getElementsByClassName("Body");
-
-for (let i =0;i<elements.length; i++ ){
-console.log(elements[i]);
-elements[i].style.backgroundImage="linear-gradient(white,white)";
-elements[i].style.color="black";
-var elements1=document.getElementsByClassName("info");
-
-for (let i =0;i<elements1.length; i++ ){
-console.log(elements1[i]);
-elements1[i].style.backgroundImage="linear-gradient(to right,azure,lightblue)";
-};
-document.getElementsByClassName("header")[0].style.backgroundImage="linear-gradient(azure,lightblue)";
-};
-};
-};
-</script>
-
+<h1 style="background-color: rgba(240, 255, 255, 0.144);top: 85%;position: absolute;width: 100%;" class="styledHeading">Certifications</h1>
+<img src="cloud.png" alt="" style="top:105%;position: absolute;">
+<img src="images.png" alt="" style="top:105%;left:55%;position: absolute;">
 </body>
 </html>
