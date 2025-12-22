@@ -34,7 +34,7 @@ width: 100%;
             color: cornsilk;
             border-radius: 10px;
             text-align: center;
-            font-size: 10px;
+            font-size: 100%;
         }
     </style>
 </head>
@@ -43,12 +43,12 @@ width: 100%;
         <br><h2 class="styledHeading">Welcome to my portfolio site</h2>
        </div>
 <h1 class="styledheading">I am Pranatosh Satpati</h1>
-    <h3 class="styledheading">A dual degree major ,graduate in Chemistry and pursuing BS in Data Science from IITM</h3>
-    <hr>
-    <h1 style="background-color: rgba(240, 255, 255, 0.144);" class="styledHeading">Skills</h1>
+    <h3 class="styledheading" style="top:22%">A dual degree major ,graduate in Chemistry and pursuing BS in Data Science from IITM</h3>
+    <hr style="position: absolute;top:19%">
+    <h1 style="background-color: rgba(240, 255, 255, 0.144);position: absolute;top:23%;width:100%;" class="styledHeading">Skills</h1>
     <div class="deck" style="width: 60%;height: 21%;top:35%"><h3>Python skills</h3> <hr>
     <p>Pandas</p>
-<p>Natplotlib</p>
+<p>Matplotlib</p>
 <p>Flask</p></div>
 <div class="deck" style="left:61%; width: 37%;height: 21%;top:35%">
     <h3>Web dev and JS skills</h3>
@@ -82,22 +82,28 @@ width: 100%;
 <script>
 var w= window.innerWidth
 if (w<1200){
-    console.log("Mobile not supported")
+    alert("Mobile not supported")
     var elm = document.getElementsByClassName("deck");
     for (i = 0; i < elm.length; i++) {
         console.log(elm[i])
-        elm[i].style.top=i*25+40+"%"
+        elm[i].style.top=i*30+40+"%"
         elm[i].style.width="100%"
         elm[i].style.left = 0 + "%"
          elm[i].style.height = 24 + "%"
     }
-    document.getElementById("styledHeading").style.top = 170 + "%"
+    document.getElementById("styledHeading").style.top = 190 + "%"
     
     document.getElementById("cloud").style.top=200+"%"
 
-    document.getElementById("images").style.top = 275 + "%"
+    document.getElementById("images").style.top = 325 + "%"
+  
+    document.getElementById("images").style.width= 75 + "%"
+    document.getElementById("images").style.height ="auto"
+    document.getElementById("cloud").style.width = 75 + "%"
+    document.getElementById("cloud").style.height = "auto"
     document.getElementById("images").style.left = 0 + "%"
-    document.body.style.height=325+"%"  
+    document.getElementById("cloud").style.left=0+"%"
+    document.body.style.height=525+"%"
 }
 
 </script>
