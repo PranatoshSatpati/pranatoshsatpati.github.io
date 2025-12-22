@@ -34,6 +34,7 @@ width: 100%;
             color: cornsilk;
             border-radius: 10px;
             text-align: center;
+            font-size: 10px;
         }
     </style>
 </head>
@@ -42,14 +43,14 @@ width: 100%;
         <br><h2 class="styledHeading">Welcome to my portfolio site</h2>
        </div>
 <h1 class="styledheading">I am Pranatosh Satpati</h1>
-    <h3 class="styledheading">A dual degree major ,graduate in Chemistry and pursuing BS in data Science from IITM</h3>
+    <h3 class="styledheading">A dual degree major ,graduate in Chemistry and pursuing BS in Data Science from IITM</h3>
     <hr>
     <h1 style="background-color: rgba(240, 255, 255, 0.144);" class="styledHeading">Skills</h1>
-    <div class="deck" style="width: 60%;height: 21%;"><h3>Python skills</h3> <hr>
+    <div class="deck" style="width: 60%;height: 21%;top:35%"><h3>Python skills</h3> <hr>
     <p>Pandas</p>
 <p>Natplotlib</p>
 <p>Flask</p></div>
-<div class="deck" style="left:61%; width: 37%;height: 21%;">
+<div class="deck" style="left:61%; width: 37%;height: 21%;top:35%">
     <h3>Web dev and JS skills</h3>
     <hr>
     <p>CSS and Javascript</p>
@@ -75,8 +76,30 @@ width: 100%;
     <p>DB Managemet using mysql</p>
     <p>Completed system threat forecasting ML projet</p>
 </div>
-<h1 style="background-color: rgba(240, 255, 255, 0.144);top: 85%;position: absolute;width: 100%;" class="styledHeading">Certifications</h1>
-<img src="cloud.png" alt="" style="top:105%;position: absolute;">
-<img src="images.png" alt="" style="top:105%;left:55%;position: absolute;">
+<h1 id="styledHeading" style="background-color: rgba(240, 255, 255, 0.144);top: 85%;position: absolute;width: 100%;" class="styledHeading">Certifications</h1>
+<img id="cloud" src="cloud.png" alt="" style="top:105%;position: absolute;">
+<img id="images" src="images.png" alt="" style="top:105%;left:55%;position: absolute;">
+<script>
+var w= window.innerWidth
+if (w<1200){
+    alert("Mobile not supported")
+    var elm = document.getElementsByClassName("deck");
+    for (i = 0; i < elm.length; i++) {
+        console.log(elm[i])
+        elm[i].style.top=i*25+40+"%"
+        elm[i].style.width="100%"
+        elm[i].style.left = 0 + "%"
+         elm[i].style.height = 24 + "%"
+    }
+    document.getElementById("styledHeading").style.top = 170 + "%"
+    
+    document.getElementById("cloud").style.top=200+"%"
+
+    document.getElementById("images").style.top = 275 + "%"
+    document.getElementById("images").style.left = 0 + "%"
+    document.body.style.height=325+"%"
+}
+
+</script>
 </body>
 </html>
