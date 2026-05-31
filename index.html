@@ -73,21 +73,21 @@
     pointer-events: none;
 }
 #introduction{
-    background-image: url("board_vine.png");
+    background-image: url("image/board_vine.png");
 }
     </style>
 </head>
 
-<body style="background-image:url('background_dark.png');cursor: none;">
+<body style="background-image:url('image/background_dark.png');cursor: none;">
   <div  id="cursor"></div>
     <div>
         </div class="works">
-    <div style="background-image: url('banner_winter.png');background-size: cover;" id="welcome" class="navbar">
+    <div style="background-image: url('image/banner_winter.png');background-size: cover;" id="welcome" class="navbar">
         <br>
         <h2 style="text-shadow:  2px solid black;" class="styledHeading" >Welcome to my portfolio site</h2>
         
     </div>
-    <div id="introduction" style="font-size: x-large;border:  2px solid black;background-color: rgba(65, 64, 64,0.2);background-image: url('board.png');"><h1 class="styledheading" id="sentance">I AM PRANATOSH SATPATI</h1>
+    <div id="introduction" style="font-size: x-large;border:  2px solid black;background-color: rgba(65, 64, 64,0.2);background-image: url('image/board.png');"><h1 class="styledheading" id="sentance">I AM PRANATOSH SATPATI</h1>
     <h2 class="styledheading" style="left:5%">A DUAL DEGREE MAJOR ,GRADUATE IN CHEMISTRY AND PURSUING BS in DATA SCIENCE
         FROM IITM</h2>
         <h2 class="styledheading">I AM INTERESTED IN MACHINE LEARNING , AI ,PIXEL ART AND GAME DEV</h2>
@@ -141,16 +141,16 @@
     <div style="background-color: rgba(240, 248, 255, 0.164);">
     <span>Select background</span>
     <select name="" id="backSl" style="background-color: rgba(133, 138, 138, 0.062);">
-        <option value="background_cloud.png">Clouds</option>
-        <option value="background_sky.png">Sky</option>
-        <option value="background.png">Basic</option>
+        <option value="image/background_cloud.png">Clouds</option>
+        <option value="image/background_sky.png">Sky</option>
+        <option value="image/background.png">Basic</option>
     </select>
     <br>
     <span>Change cursor</span>
     <select id="ModifyCursor" style="background-color: rgba(160, 101, 120, 0.062);">
-        <option value="cursor.png">Basic</option>
-        <option value="cursor_blue.png">Pastel</option>
-        <option value="Cat.png">Cat</option>
+        <option value="image/cursor.png">Basic</option>
+        <option value="image/cursor_blue.png">Pastel</option>
+        <option value="image/Cat.png">Cat</option>
     </select></div>
 </div>
 </div>
@@ -169,7 +169,7 @@
     
 </p>
 <script>
-    var banner_path="banner_winter.png"
+    var banner_path="image/banner_winter.png"
     var w = window.innerWidth
      document.getElementById("welcome").style.width = 100 + "%"
      
@@ -182,17 +182,23 @@ t="night"
      else{
         t="morning"
      }
-     if (0){
+     if (t=="morning"){
 
-        document.body.style.backgroundImage="url('background_sky.png')"
-        document.getElementById("welcome").style.backgroundImage ="url('banner_winter_eve.png')"
-        document.getElementById("introduction").style.backgroundImage = "url('board_vine.png')"
+        document.body.style.backgroundImage="url('image/background_sky.png')"
+        document.getElementById("welcome").style.backgroundImage ="url('image/banner_winter_eve.png')"
+        document.getElementById("introduction").style.backgroundImage = "url('image/board_vine.png')"
      }
      else{
         
-         document.body.style.backgroundImage = "url('background_cloud.png')"
-         document.getElementById("welcome").style.backgroundImage = "url('banner_winter_morning.png')"
-         document.getElementById("introduction").style.backgroundImage="url('board.png')"
+         document.body.style.backgroundImage = "url('image/background_cloud.png')"
+         document.getElementById("welcome").style.backgroundImage = "url('image/banner_winter_morning.png')"
+         document.getElementById("introduction").style.backgroundImage="url('image/board.png')"
+     }
+     var background_offset=0;
+     function AnimateBackground(){
+        background_offset+=1;
+        document.body.style.backgroundPositionX=background_offset.toString()+"px";
+         document.body.style.backgroundPositionY = (background_offset).toString() + "px";
      }
     function layout() {
         var w = window.innerWidth
@@ -241,10 +247,10 @@ t="night"
     var getMouse=document.getElementById("ModifyCursor")
     banner.addEventListener("click", function(){
 
-        if (banner_path== "banner_winter_morning.png"){
-            banner_path= "banner_winter_eve.png"
-            document.body.style.backgroundImage = "url('background_sky.png')"
-            document.getElementById("introduction").style.backgroundImage = "url('board.png')"
+        if (banner_path== "image/banner_winter_morning.png"){
+            banner_path= "image/banner_winter_eve.png"
+            document.body.style.backgroundImage = "url('image/background_sky.png')"
+            document.getElementById("introduction").style.backgroundImage = "url('image/board.png')"
             elm = document.getElementsByClassName("deck");
             for (i = 0; i < elm.length; i++) {
                 elm[i].style.backgroundColor='rgba(110, 85, 124, 0.7)'
@@ -254,9 +260,9 @@ t="night"
 
         }
         else{
-            document.getElementById("introduction").style.backgroundImage = "url('board_vine.png')"
-            banner_path= "banner_winter_morning.png"
-             document.body.style.backgroundImage = "url('background_cloud.png')"
+            document.getElementById("introduction").style.backgroundImage = "url('image/board_vine.png')"
+            banner_path= "image/banner_winter_morning.png"
+             document.body.style.backgroundImage = "url('image/background_cloud.png')"
               elm = document.getElementsByClassName("deck");
             for (i = 0; i < elm.length; i++) {
                 elm[i].style.backgroundColor = 'rgba(60,120,250,0.5)'
@@ -300,6 +306,7 @@ document.getElementById("show_certification").addEventListener("click",
         }
     }
 )
+setInterval(AnimateBackground,5);
 </script>
 
 </body>
