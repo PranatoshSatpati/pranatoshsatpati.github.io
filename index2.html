@@ -1,0 +1,307 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <style>
+        .navbar {
+            width: 100%;
+            background-image: linear-gradient(to right, rgb(48, 48, 92), rgba(255, 192, 203, 0.432));
+           
+            color: white;
+            margin-top: 0%;
+            padding-top: 0%;
+            margin-bottom: 0%;
+            padding-bottom: 0%;
+            border-radius: 50px;
+            text-align: center;
+            background-position: center;
+            image-rendering: pixelated;
+        }
+@font-face {
+    font-family: "Game";
+    src: url('Font.ttf');
+}
+        .styledHeading {
+
+            color: azure;
+            text-align: left;
+            font-family: "Game";
+        }
+
+        .leftheading {
+
+            color: azure;
+            text-align: left;
+        }
+
+        .deck {
+           
+          
+            color: cornsilk;
+          
+            text-align: center;
+            font-size: 100%;
+        }
+        #skill {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            background-color: rgba(154, 189, 219, 0.10);
+            gap:5vh;
+            
+        }
+        .deck{
+            background-size: contain;
+            background-color: rgba(110, 85, 124, 0.7);
+            background-image: url("deck.png");
+            border: 2px solid black;
+        }
+        #welcome:hover{
+            box-shadow: 10px 5px 30px 20px rgb(149, 126, 160);
+        }
+         .deck:hover{
+            box-shadow: 0px 5px 30px 20px rgb(149, 126, 160);
+        }
+#cursor{
+    position: fixed;
+    background-image: url("cursor.png");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+}
+#introduction{
+    background-image: url("board_vine.png");
+}
+    </style>
+</head>
+
+<body style="background-image:url('background_dark.png');cursor: none;">
+  <div  id="cursor"></div>
+    <div>
+        </div class="works">
+    <div style="background-image: url('banner_winter.png');background-size: cover;" id="welcome" class="navbar">
+        <br>
+        <h2 style="text-shadow:  2px solid black;" class="styledHeading" >Welcome to my portfolio site</h2>
+        
+    </div>
+    <div id="introduction" style="font-size: x-large;border:  2px solid black;background-color: rgba(65, 64, 64,0.2);background-image: url('board.png');"><h1 class="styledheading" id="sentance">I AM PRANATOSH SATPATI</h1>
+    <h2 class="styledheading" style="left:5%">A DUAL DEGREE MAJOR ,GRADUATE IN CHEMISTRY AND PURSUING BS in DATA SCIENCE
+        FROM IITM</h2>
+        <h2 class="styledheading">I AM INTERESTED IN MACHINE LEARNING , AI ,PIXEL ART AND GAME DEV</h2>
+</div>
+
+
+
+<hr style="position: absolute;top:19%">
+<h1 style="background-color: rgba(240, 255, 255, 0.315);" class="styledHeading">
+    Skills</h1>
+    <div id='skill' class="skill">
+<div class="deck">
+    <h3>Python skills</h3>
+    <hr>
+    <p>Pandas</p>
+    <p>Matplotlib</p>
+    <p>Flask</p>
+</div>
+<div class="deck" >
+    <h3>Web dev and JS skills</h3>
+    <hr>
+    <p>CSS and Javascript</p>
+    <p>VueJS front end framework</p>
+    <p>Flask Restful API backend</p>
+</div>
+<div class="deck">
+    <h3>Machine Learning skills</h3>
+    <hr>
+    <p>Machine learning with python Scikit learn</p>
+    <p>Tensorflow Keras Deeep learning</p>
+    <p>ML app hosting using streamlit</p>
+</div>
+<div class="deck">
+    <h3>Writing skils</h3>
+    <hr>
+    <p>Reguler member of IITM Sahitikya Literary Club</p>
+    <p>Proefficient in English and Bengali writing</p>
+    <p>Experienced with writing formal business analysis</p>
+</div>
+<div class="deck" >
+    <h3>Other skils</h3>
+    <hr>
+    <p>Experienced in Linux and bash script</p>
+    <p>DB Managemet using mysql</p>
+    <p>Completed system threat forecasting ML projet</p>
+</div>
+
+<div><h1 id="styledHeading" style="background-color: rgba(240, 255, 255, 0.144);top: 85%;width: 100%;" class="styledHeading">
+    Cusstomize this site !!!</h1>
+    <br>
+    <div style="background-color: rgba(240, 248, 255, 0.164);">
+    <span>Select background</span>
+    <select name="" id="backSl" style="background-color: rgba(133, 138, 138, 0.062);">
+        <option value="background_cloud.png">Clouds</option>
+        <option value="background_sky.png">Sky</option>
+        <option value="background.png">Basic</option>
+    </select>
+    <br>
+    <span>Change cursor</span>
+    <select id="ModifyCursor" style="background-color: rgba(160, 101, 120, 0.062);">
+        <option value="cursor.png">Basic</option>
+        <option value="cursor_blue.png">Pastel</option>
+        <option value="Cat.png">Cat</option>
+    </select></div>
+</div>
+</div>
+<div id="certification">
+<h1 id="styledHeading" style="background-color: rgba(240, 255, 255, 0.144);top: 85%;width: 100%;"
+    class="styledHeading">Certifications</h1> <button id="show_certification">show</button> <br>
+<img style="display:inline;" id="cloud" src="cloud.png" alt="" >
+<img  style="display:inline;"id="images" src="images.png" alt="" >
+</div><p style="bottom: 0%;color: aliceblue;font-size: large;">
+    © 2026 Pranatosh Satpati —
+    Licensed under CC BY-NC 4.0
+    https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en
+
+    You are free to use all the artwork in the site for personal uses , including remixing
+    But commercial use is not allowed
+    
+</p>
+<script>
+    var banner_path="banner_winter.png"
+    var w = window.innerWidth
+     document.getElementById("welcome").style.width = 100 + "%"
+     
+     var hour= new Date().getHours()
+     var t 
+
+     if (hour <7 || hour >18){
+t="night"
+     }
+     else{
+        t="morning"
+     }
+     if (0){
+
+        document.body.style.backgroundImage="url('background_sky.png')"
+        document.getElementById("welcome").style.backgroundImage ="url('banner_winter_eve.png')"
+        document.getElementById("introduction").style.backgroundImage = "url('board_vine.png')"
+     }
+     else{
+        
+         document.body.style.backgroundImage = "url('background_cloud.png')"
+         document.getElementById("welcome").style.backgroundImage = "url('banner_winter_morning.png')"
+         document.getElementById("introduction").style.backgroundImage="url('board.png')"
+     }
+    function layout() {
+        var w = window.innerWidth
+        if (w < 12000) {
+            var w = window.innerWidth
+            console.log("Mobile site in Developmet")
+            var elm = document.getElementsByClassName("deck");
+            for (i = 0; i < elm.length; i++) {
+                console.log(elm[i])
+            
+              
+            }
+            elm = document.getElementsByClassName("styledHeading");
+            for (i = 0; i < elm.length; i++) {
+                console.log(elm[i])
+               
+                
+            }
+            elm = document.getElementsByTagName("h3");
+            for (i = 0; i < elm.length; i++) {
+                console.log(elm[i])
+                
+              
+            }
+            
+            document.getElementById("styledHeading").style.top = 190 + "%"
+
+            document.getElementById("cloud").style.top = 200 + "%"
+
+            document.getElementById("images").style.top = 325 + "%"
+
+            document.getElementById("images").style.width = 25  + "%"
+            document.getElementById("images").style.height = "auto"
+            document.getElementById("cloud").style.width = 25 + "%"
+            document.getElementById("cloud").style.height = "auto"
+            document.getElementById("images").style.left = 0 + "%"
+            document.getElementById("cloud").style.left = 0 + "%"
+            document.body.style.height = 525 + "%"
+           
+        }
+    }
+    layout()
+    window.addEventListener("resize", layout)
+    var banner = document.getElementById("welcome")
+    var backSelector=document.getElementById("backSl")
+    var getMouse=document.getElementById("ModifyCursor")
+    banner.addEventListener("click", function(){
+
+        if (banner_path== "banner_winter_morning.png"){
+            banner_path= "banner_winter_eve.png"
+            document.body.style.backgroundImage = "url('background_sky.png')"
+            document.getElementById("introduction").style.backgroundImage = "url('board.png')"
+            elm = document.getElementsByClassName("deck");
+            for (i = 0; i < elm.length; i++) {
+                elm[i].style.backgroundColor='rgba(110, 85, 124, 0.7)'
+
+
+            }
+
+        }
+        else{
+            document.getElementById("introduction").style.backgroundImage = "url('board_vine.png')"
+            banner_path= "banner_winter_morning.png"
+             document.body.style.backgroundImage = "url('background_cloud.png')"
+              elm = document.getElementsByClassName("deck");
+            for (i = 0; i < elm.length; i++) {
+                elm[i].style.backgroundColor = 'rgba(60,120,250,0.5)'
+
+
+            }
+        }
+banner.style.backgroundImage="url('"+banner_path+"')"
+    })
+    backSelector.addEventListener("click", function () {
+document.body.style.backgroundImage="url('"+backSelector.value+"')"
+    })
+    getMouse.addEventListener("click", function () {
+        document.getElementById("cursor").style.backgroundImage = "url('" + getMouse.value + "')"
+    })
+
+var x
+var y
+var c=document.getElementById("cursor")
+document.addEventListener("mousemove" ,
+    function  setPos(mouse){
+        c.style.left=mouse.clientX+"px";
+         c.style.top=mouse.clientY+"px";
+
+
+    }
+)
+
+document.getElementById("show_certification").addEventListener("click",
+    function (){
+        if( document.getElementById("show_certification").textContent=="show"){
+            document.getElementById("show_certification").textContent = "hide"
+            document.getElementById("cloud").style.display="inline"
+            document.getElementById("images").style.display = "inline"
+
+        }
+        else{
+             document.getElementById("show_certification").textContent = "show"
+             document.getElementById("cloud").style.display = "none"
+             document.getElementById("images").style.display = "none"
+        }
+    }
+)
+</script>
+
+</body>
+
+</html>
