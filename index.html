@@ -8,7 +8,7 @@
     <style>
         .navbar {
             width: 100%;
-            background-image: linear-gradient(to right, rgb(48, 48, 92), rgba(255, 192, 203, 0.432));
+            background-image: linear-gradient(to right, rgb(23, 23, 41), rgba(192, 255, 241, 0.432));
            
             color: white;
             margin-top: 0%;
@@ -27,8 +27,9 @@
         .styledHeading {
 
             color: azure;
-            text-align: left;
-            font-family: "Game";
+           
+            left: 50%;
+          
         }
 
         .leftheading {
@@ -44,25 +45,28 @@
           
             text-align: center;
             font-size: 100%;
+
         }
         #skill {
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-template-columns: repeat(auto-fit,minmax(40%,1fr));
             background-color: rgba(154, 189, 219, 0.10);
             gap:5vh;
+            border-radius: 20px;
             
         }
         .deck{
             background-size: contain;
-            background-color: rgba(110, 85, 124, 0.7);
+            background-color: rgba(85, 91, 124, 0.1);
             background-image: url("deck.png");
-            border: 2px solid black;
+            border-radius: 10px;
+            font-size: larger;
         }
         #welcome:hover{
-            box-shadow: 10px 5px 30px 20px rgb(149, 126, 160);
+            box-shadow: 10px 5px 30px 20px rgb(126, 160, 157);
         }
          .deck:hover{
-            box-shadow: 0px 5px 30px 20px rgb(149, 126, 160);
+            box-shadow: 0px 5px 30px 20px rgba(74, 182, 196, 0.384);
         }
 #cursor{
     position: fixed;
@@ -72,25 +76,24 @@
     height: 32px;
     pointer-events: none;
 }
-#introduction{
-    background-image: url("image/board_vine.png");
-}
+
     </style>
 </head>
 
-<body style="background-image:url('image/background_dark.png');cursor: none;">
+<body style="background-image:linear-gradient(rgb(2, 39, 71),rgb(105, 201, 148));cursor: none;">
   <div  id="cursor"></div>
     <div>
         </div class="works">
-    <div style="background-image: url('image/banner_winter.png');background-size: cover;" id="welcome" class="navbar">
+    <div style="background-color:rgba(255,255,200,0.2);background-size: cover;" id="welcome" class="navbar">
         <br>
-        <h2 style="text-shadow:  2px solid black;" class="styledHeading" >Welcome to my portfolio site</h2>
+        <h2 style="text-shadow:  2px solid black;text-align: center;" class="styledHeading" >Welcome to my portfolio site</h2>
+        <br>
         
     </div>
-    <div id="introduction" style="font-size: x-large;border:  2px solid black;background-color: rgba(65, 64, 64,0.2);background-image: url('image/board.png');"><h1 class="styledheading" id="sentance">I AM PRANATOSH SATPATI</h1>
-    <h2 class="styledheading" style="left:5%">A DUAL DEGREE MAJOR ,GRADUATE IN CHEMISTRY AND PURSUING BS in DATA SCIENCE
+    <div id="introduction" style="background-color: rgba(65, 64, 64,0.2);background-color: rgba(255,255,255,0.1);"><h1 class="styledheading" id="sentance">I am Pranatosh Satpati</h1>
+    <h2 class="styledheading" >A dual degree major ,graduate with honours in CHEMISTRY and pursuing BS in DATA SCIENCE
         FROM IITM</h2>
-        <h2 class="styledheading">I AM INTERESTED IN MACHINE LEARNING , AI ,PIXEL ART AND GAME DEV</h2>
+        <h2 class="styledheading">I am interested in MACHINE LEARNING , AI ,PIXEL ART AND GAME DEV</h2>
 </div>
 
 
@@ -152,11 +155,20 @@
         <option value="image/cursor_blue.png">Pastel</option>
         <option value="image/Cat.png">Cat</option>
     </select></div>
+    <br>
+    <span>Select Banner</span>
+    <select name="" id="bannerSelect" style="background-color: rgba(0, 0, 0, 0.021);">
+
+        <option value="image/banner.png">Simple banner</option>
+        <option value="image/banner_winter_morning.png">Winter banner</option>
+
+    </select>
+
 </div>
-</div>
-<div id="certification">
+</div>z
+<div id="certification">z
 <h1 id="styledHeading" style="background-color: rgba(240, 255, 255, 0.144);top: 85%;width: 100%;"
-    class="styledHeading">Certifications</h1> <button id="show_certification">show</button> <br>
+    class="styledHeading">Certifications</h1> 
 <img style="display:inline;" id="cloud" src="cloud.png" alt="" >
 <img  style="display:inline;"id="images" src="images.png" alt="" >
 </div><p style="bottom: 0%;color: aliceblue;font-size: large;">
@@ -164,13 +176,10 @@
     Licensed under CC BY-NC 4.0
     https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en
 
-    You are free to use the artwork used in the site with the given link for personal uses , including remixing
+    You are free to use all the artwork in the site for personal uses , including remixing
     But commercial use is not allowed
-    Only the files from the given link 
-    Other art is on the site is still undewr copyright
     
 </p>
-    <a href="https://github.com/PranatoshSatpati/pranatoshsatpati.github.io/tree/main/image"> Copyright free art folders</a>
 <script>
     var banner_path="image/banner_winter.png"
     var w = window.innerWidth
@@ -179,30 +188,6 @@
      var hour= new Date().getHours()
      var t 
 
-     if (hour <7 || hour >18){
-t="night"
-     }
-     else{
-        t="morning"
-     }
-     if (t=="morning"){
-
-        document.body.style.backgroundImage="url('image/background_sky.png')"
-        document.getElementById("welcome").style.backgroundImage ="url('image/banner_winter_eve.png')"
-        document.getElementById("introduction").style.backgroundImage = "url('image/board_vine.png')"
-     }
-     else{
-        
-         document.body.style.backgroundImage = "url('image/background_cloud.png')"
-         document.getElementById("welcome").style.backgroundImage = "url('image/banner_winter_morning.png')"
-         document.getElementById("introduction").style.backgroundImage="url('image/board.png')"
-     }
-     var background_offset=0;
-     function AnimateBackground(){
-        background_offset+=1;
-        document.body.style.backgroundPositionX=background_offset.toString()+"px";
-         document.body.style.backgroundPositionY = (background_offset).toString() + "px";
-     }
     function layout() {
         var w = window.innerWidth
         if (w < 12000) {
@@ -243,45 +228,24 @@ t="night"
            
         }
     }
-    layout()
-    window.addEventListener("resize", layout)
-    var banner = document.getElementById("welcome")
+     var banner = document.getElementById("welcome")
     var backSelector=document.getElementById("backSl")
     var getMouse=document.getElementById("ModifyCursor")
-    banner.addEventListener("click", function(){
-
-        if (banner_path== "image/banner_winter_morning.png"){
-            banner_path= "image/banner_winter_eve.png"
-            document.body.style.backgroundImage = "url('image/background_sky.png')"
-            document.getElementById("introduction").style.backgroundImage = "url('image/board.png')"
-            elm = document.getElementsByClassName("deck");
-            for (i = 0; i < elm.length; i++) {
-                elm[i].style.backgroundColor='rgba(110, 85, 124, 0.7)'
-
-
-            }
-
-        }
-        else{
-            document.getElementById("introduction").style.backgroundImage = "url('image/board_vine.png')"
-            banner_path= "image/banner_winter_morning.png"
-             document.body.style.backgroundImage = "url('image/background_cloud.png')"
-              elm = document.getElementsByClassName("deck");
-            for (i = 0; i < elm.length; i++) {
-                elm[i].style.backgroundColor = 'rgba(60,120,250,0.5)'
-
-
-            }
-        }
-banner.style.backgroundImage="url('"+banner_path+"')"
-    })
+  
     backSelector.addEventListener("click", function () {
 document.body.style.backgroundImage="url('"+backSelector.value+"')"
+if (backSelector.value=="image/background.png"){
+    document.body.style.backgroundImage="linear-gradient(rgb(2, 39, 71),rgb(105, 201, 148))";
+}
     })
     getMouse.addEventListener("click", function () {
         document.getElementById("cursor").style.backgroundImage = "url('" + getMouse.value + "')"
+        
     })
-
+var bannerSelector=document.getElementById("bannerSelect");
+bannerSelector.addEventListener("click",function(){
+    document.getElementById("welcome").style.backgroundImage = "url('" + bannerSelector.value + "')"
+})
 var x
 var y
 var c=document.getElementById("cursor")
@@ -294,22 +258,9 @@ document.addEventListener("mousemove" ,
     }
 )
 
-document.getElementById("show_certification").addEventListener("click",
-    function (){
-        if( document.getElementById("show_certification").textContent=="show"){
-            document.getElementById("show_certification").textContent = "hide"
-            document.getElementById("cloud").style.display="inline"
-            document.getElementById("images").style.display = "inline"
-
-        }
-        else{
-             document.getElementById("show_certification").textContent = "show"
-             document.getElementById("cloud").style.display = "none"
-             document.getElementById("images").style.display = "none"
-        }
-    }
-)
-setInterval(AnimateBackground,5);
+    layout()
+    window.addEventListener("resize", layout)
+  
 </script>
 
 </body>
