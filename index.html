@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,127 +7,419 @@
 
     <style>
         .navbar {
-width: 100%;
-           background-image: linear-gradient(to right, rgb(48, 48, 92),rgba(255, 192, 203, 0.432));
-            height: 10vh;
+            width: 100%;
+            background-image: linear-gradient(to right, rgba(23, 32, 41, 0.799), rgba(192, 255, 241, 0.432));
+           
             color: white;
             margin-top: 0%;
             padding-top: 0%;
             margin-bottom: 0%;
             padding-bottom: 0%;
-            border-radius: 50px;
+            height: 10vh;
+            
             text-align: center;
+            background-position: center;
+            image-rendering: pixelated;
         }
-
-        .styledHeading{
+@font-face {
+    font-family: "Game";
+    src: url('Font.ttf');
+}
+        .styledHeading {
 
             color: azure;
-            text-align: center;
+           
+            left: 50%;
+            font-family: monospace;
+            font-size: x-large;
+            width: 90vw;
+          
         }
-        .leftheading{
+
+        .leftheading {
 
             color: azure;
             text-align: left;
         }
-        .deck{
-            position: absolute;
-            background-color: rgba(240, 255, 255, 0.51);
+
+        .deck {
+           
+          
             color: cornsilk;
-            border-radius: 10px;
+          
             text-align: center;
             font-size: 100%;
+
+
         }
+        #skill {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(30%,1fr));
+            background-color: rgba(51, 63, 73, 0.3);
+            gap:5vh;
+            border-radius: 20px;
+            
+        }
+        .deck{
+            background-size: contain;
+           
+          
+            border-radius: 10px;
+            font-size: large;
+        }
+        #welcome:hover{
+            box-shadow: 10px 5px 30px 20px rgba(126, 160, 157, 0);
+         
+        }   .deck_t1{
+ background-color: rgba(85, 91, 124, 0.1);
+                
+            }
+            .deck_t2{
+                background-color: maroon;
+            }
+         .deck_t1:hover{
+            box-shadow: 0px 5px 30px 20px rgba(74, 182, 196, 0.324);
+            background-color: rgba(240, 248, 255, 0.492);
+        }
+        .deck_t2:hover{
+            box-shadow: 0px 5px 30px 20px rgba(196, 123, 74, 0.324);
+            background-color: rgba(228, 158, 8, 0.952);
+        }
+        .skill_glow:hover{
+            box-shadow: 10px 5px 30px 20px rgb(126, 160, 157);
+        }
+        .styledHeading:hover{
+           
+            color:aliceblue;
+        }
+#cursor{
+    position: fixed;
+    background-image: url("cursor.png");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+}
+#images{
+
+         
+            box-shadow: 0px 5px 30px 20px rgba(74, 182, 196, 0.324);
+}
+#cloud{
+   box-shadow: 0px 5px 30px 20px rgba(74, 182, 196, 0.324);
+}
     </style>
 </head>
-<body style="background-image:linear-gradient(pink,rgb(64, 54, 153) , rgb(39, 32, 97));">
-    <div></div class= "works">
-    <div class="navbar">
-        <br><h2 class="styledHeading">Welcome to my portfolio site</h2>
-       </div>
-<h1 class="styledheading">I am Pranatosh Satpati</h1>
-    <h3 class="styledheading" style="top:22%">A dual degree major ,graduate in Chemistry and pursuing BS in Data Science from IITM</h3> </body> </html> </div>
-    <hr style="position: absolute;top:19%">
-    <h1 style="background-color: rgba(240, 255, 255, 0.144);position: absolute;top:27%;width:100%;" class="styledHeading">Skills</h1>
-    <div class="deck" style="width: 60%;height: 23%;top:35%"><h3>Python skills</h3> <hr>
+
+<body style="background-image:linear-gradient(rgb(2, 39, 71),rgb(105, 201, 148));">
+  <div  id="cursor"></div>
+    <div>
+        </div class="works">
+    <div style="background-color:rgba(255,255,200,0.2);background-size: cover;" id="welcome" class="navbar">
+        <br>
+        <span style="text-shadow:  2px solid black;text-align: left;" class="styledHeading" >PROGRAMMERS PORTFOLIO</span> 
+        <button  id="theme" style="float: right;width: 10%;height: 5vh;background-color: rgba(255, 255, 255, 0.24);border-radius: 10px;">Light</button>
+        <br>
+        
+    </div>
+    <div id="introduction" 
+    style="background-color: rgba(65, 64, 64,0.2);background-color: rgba(255,255,255,0);">
+        <h1 class="styledheading" id="sentance">I am <span id="username" style="color: deepskyblue;"></span> <span id="username_effect">|</span> </h1>
+    <h2 class="styledheading" >A dual degree major ,graduate with honours in CHEMISTRY and 
+        <br>pursuing <span id="degree" style="color:lightseagreen;">BS in DATA SCIENCE</span>
+        FROM IITM</h2>
+        <h2 class="styledheading">I am interested in <br><span id="hobby"></span></h2>
+</div>
+
+
+
+<hr style="position: absolute;top:19%">
+<p style="background-color: rgba(240, 255, 255, 0.015);font-size: xx-large;font-family:monospace;text-align: center;color: azure;" >
+    Skills</p>
+    <div id='skill' class="skill">
+<div class="deck">
+    <h3>Python skills</h3>
+    <hr>
     <p>Pandas</p>
-<p>Matplotlib</p>
-<p>Flask</p></div>
-<div class="deck" style="left:61%; width: 37%;height: 23%;top:35%">
+    <p>Matplotlib</p>
+    <p>Flask</p>
+</div>
+<div class="deck" >
     <h3>Web dev and JS skills</h3>
     <hr>
     <p>CSS and Javascript</p>
     <p>VueJS front end framework</p>
     <p>Flask Restful API backend</p>
-</div><div class="deck" style="left:1%; width: 37%;top: 60%;height: 22%;">
+</div>
+<div class="deck">
     <h3>Machine Learning skills</h3>
     <hr>
     <p>Machine learning with python Scikit learn</p>
     <p>Tensorflow Keras Deeep learning</p>
     <p>ML app hosting using streamlit</p>
 </div>
-<div class="deck" style="left:39%; width: 37%;top: 60%;height: 22%;">
+<div class="deck">
     <h3>Writing skils</h3>
     <hr>
     <p>Reguler member of IITM Sahitikya Literary Club</p>
     <p>Proefficient in English and Bengali writing</p>
     <p>Experienced with writing formal business analysis</p>
-</div><div class="deck" style="left:77%; width: 23%;top: 60%;height: 22%;">
+</div>
+<div class="deck" >
     <h3>Other skils</h3>
     <hr>
     <p>Experienced in Linux and bash script</p>
     <p>DB Managemet using mysql</p>
     <p>Completed system threat forecasting ML projet</p>
 </div>
-<h1 id="styledHeading" style="background-color: rgba(240, 255, 255, 0.144);top: 85%;position: absolute;width: 100%;" class="styledHeading">Certifications</h1>
-<img id="cloud" src="cloud.png" alt="" style="top:105%;position: absolute;">
-<img id="images" src="images.png" alt="" style="top:105%;left:55%;position: absolute;">
+
+<div><h1 id="styledHeading" style="background-color: rgba(240, 255, 255, 0.144);top: 85%;width: 100%;" class="styledHeading">
+    Cusstomize this site !!!</h1>
+    <br>
+    <div style="background-color: rgba(240, 248, 255, 0.164);">
+    <span>Select background</span>
+    <select name="" id="backSl" style="background-color: rgba(133, 138, 138, 0.062);">
+        <option value="image/background_cloud.png">Clouds</option>
+        <option value="image/background_sky.png">Sky</option>
+        <option value="image/background.png">Basic</option>
+    </select>
+    <br>
+    <span>Change cursor</span>
+    <select id="ModifyCursor" style="background-color: rgba(160, 101, 120, 0.062);">
+        <option value="image/cursor.png">Basic</option>
+        <option value="image/cursor_blue.png">Pastel</option>
+        <option value="image/Cat.png">Cat</option>
+    </select></div>
+    <br>
+    <span>Select Banner</span>
+    <select name="" id="bannerSelect" style="background-color: rgba(0, 0, 0, 0.021);">
+
+        <option value="image/banner.png">Simple banner</option>
+        <option value="image/banner_winter_morning.png">Winter banner</option>
+
+    </select>
+
+</div>
+</div>
+<div id="certification">
+<h1 id="styledHeading" style="background-color: rgba(240, 255, 255, 0.144);top: 85%;width: 100%;"
+    class="styledHeading">Certifications</h1> 
+<img class="Certification" style="display:inline;" id="cloud" src="cloud.png" alt="" >
+<img class="Certification" style="display:inline;"id="images" src="images.png" alt="" >
+<img class="Certification" style="display:inline;"  src="aws_certificate.png" alt="">
+</div><p style="bottom: 0%;color: aliceblue;font-size: large;">
+    
+    © 2026 Pranatosh Satpati —
+    Licensed under CC BY-NC 4.0
+    https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en
+
+    You are free to use some of the artwork in the site for personal uses , including remixing
+    But commercial use is not allowed
+    The art with such effect could be found in the link 
+    
+</p>
+<a href="https://github.com/PranatoshSatpati/pranatoshsatpati.github.io/tree/main/image">Link</a>
 <script>
-var w= window.innerWidth
-function layout(){
-     var w = window.innerWidth
-if (w<1200){
+    var banner_path="image/banner_winter.png"
+    var w = window.innerWidth
+     document.getElementById("welcome").style.width = 100 + "%"
+     
+     var hour= new Date().getHours()
+     var t 
+
+    function layout() {
         var w = window.innerWidth
-    console.log("Mobile site in Developmet")
-    var elm = document.getElementsByClassName("deck");
-    for (i = 0; i < elm.length; i++) {
-        console.log(elm[i])
-        elm[i].style.top=i*30+40+"%"
-        elm[i].style.width="100%"
-        elm[i].style.left = 0 + "%"
-         elm[i].style.height = 24 + "%"
-         elm[i].style.fontSize="7px"
-    }
-    elm = document.getElementsByClassName("styledHeading");
-    for (i = 0; i < elm.length; i++) {
-        console.log(elm[i])
-    
-        elm[i].style.fontSize = "7px"
-    }
-     elm = document.getElementsByClassName("navbar");
-    for (i = 0; i < elm.length; i++) {
-        console.log(elm[i])
+        if (w < 12000) {
+            var w = window.innerWidth
+            
+            var elm = document.getElementsByClassName("deck");
+            for (i = 0; i < elm.length; i++) {
+                console.log(elm[i])
+            
+              
+            }
+            elm = document.getElementsByClassName("styledHeading");
+            for (i = 0; i < elm.length; i++) {
+                console.log(elm[i])
+               
+                
+            }
+            elm = document.getElementsByTagName("h3");
+            for (i = 0; i < elm.length; i++) {
+                console.log(elm[i])
+                
+              
+            }
+            
+            //document.getElementById("styledHeading").style.top = 190 + "%"
 
-        elm[i].style.height = "25vh"
+           var certifications= document.getElementsByClassName("Certification");
+           for(var i=0;i<certifications.length;i++){
+            certifications[i].style.width = 25  + "vw"
+            certifications[i].style.height = "auto"
+           
+           // document.body.style.height = 525 + "%"
+           }
+        }
     }
-    document.getElementById("styledHeading").style.top = 190 + "%"
-    
-    document.getElementById("cloud").style.top=200+"%"
-
-    document.getElementById("images").style.top = 325 + "%"
+     var banner = document.getElementById("welcome")
+    var backSelector=document.getElementById("backSl")
+    var getMouse=document.getElementById("ModifyCursor")
   
-    document.getElementById("images").style.width= 75 + "%"
-    document.getElementById("images").style.height ="auto"
-    document.getElementById("cloud").style.width = 75 + "%"
-    document.getElementById("cloud").style.height = "auto"
-    document.getElementById("images").style.left = 0 + "%"
-    document.getElementById("cloud").style.left=0+"%"
-    document.body.style.height=525+"%"
-    document.getElementById("works").style.height = 20+"%"
+    backSelector.addEventListener("click", function () {
+document.body.style.backgroundImage="url('"+backSelector.value+"')"
+if (backSelector.value=="image/background.png"){
+    document.body.style.backgroundImage="linear-gradient(rgb(2, 39, 71),rgb(105, 201, 148))";
 }
-}
-layout()
-window.addEventListener("resize",layout)
+    })
+    getMouse.addEventListener("click", function () {
+        document.getElementById("cursor").style.backgroundImage = "url('" + getMouse.value + "')"
+        
+    })
+var bannerSelector=document.getElementById("bannerSelect");
+bannerSelector.addEventListener("click",function(){
+    document.getElementById("welcome").style.backgroundImage = "url('" + bannerSelector.value + "')"
+})
+// cursor logic
+var x
+var y
+var c=document.getElementById("cursor")
+document.addEventListener("mousemove" ,
+    function  setPos(mouse){
+        c.style.left=mouse.clientX+"px";
+         c.style.top=mouse.clientY+"px";
 
+
+    }
+)
+
+    layout()
+    window.addEventListener("resize", layout)
+
+    // update name and skills line by line
+    var hobbies="MACHINE LEARNING , AI ,PIXEL ART AND GAME DEV";
+    setInterval(
+ function updateName() {
+    if (document.getElementById("username").textContent!="Pranatosh Satpati"){
+    document.getElementById("username").textContent+="Pranatosh Satpati"[document.getElementById("username").textContent.length];
+  } else if (
+ 
+  document.getElementById("hobby").textContent != hobbies) {
+       document.getElementById("username_effect").style.display = 'None'
+         document.getElementById("hobby").textContent += hobbies[document.getElementById("hobby").textContent.length];
+     }
+    },100
+)
+
+//Light and Dark Mode toggle
+var backgroundDark=document.body.style.backgroundImage;
+var backgroundLight="linear-gradient(rgb(255, 249, 255),rgb(205, 201, 208))";
+var DeckCollection= document.getElementsByClassName("deck");
+var CardDesignDark=" rgba(85, 91, 124, 0.1)";
+var CardDesignLight="maroon"
+var StyleHeadings=document.getElementsByClassName("styledHeading");
+var theme_node=document.getElementById("theme");
+// init theme
+if(theme_node.textContent=="Light"){
+     document.body.style.backgroundImage = backgroundDark;
+        for (var i = 0; i < DeckCollection.length; i++) {
+           // DeckCollection[i].style.backgroundColor = CardDesignDark;
+            DeckCollection[i].classList.add("deck_t1");
+            document.getElementById("skill").classList.add("skill_glow");
+            
+        }
+         for (var i = 0; i < StyleHeadings.length; i++) {
+        StyleHeadings[i].style.color = "azure";
+
+    }
+    document.getElementById("username").style.color = "deepskyblue";
+    document.getElementById("welcome").style.backgroundImage = 'linear-gradient(to right, rgba(23, 32, 41, 0.799), rgba(192, 255, 241, 0.432))';
+    document.getElementById("skill").classList.add("skill_glow");
+
+} else {
+    document.body.style.backgroundImage = backgroundDark;
+    for (var i = 0; i < DeckCollection.length; i++) {
+       // DeckCollection[i].style.backgroundColor = CardDesignLight;
+        DeckCollection[i].classList.add("deck_t2");
+      
+    }
+
+    for (var i = 0; i < StyleHeadings.length; i++) {
+        StyleHeadings[i].style.color = "black";
+      
+    } document.getElementById("username").style.color = "deepskyblue";
+    document.getElementById("welcome").style.backgroundImage = 'linear-gradient(to right, rgba(23, 32, 41, 0.799), rgba(192, 255, 241, 0.432))';
+}
+theme_node.addEventListener("click",
+    function changeTheme(){
+        if (theme_node.textContent=="Light"){theme_node.textContent="Dark";
+            document.body.style.backgroundImage=backgroundLight;
+           for(var i=0;i<DeckCollection.length;i++){
+           // DeckCollection[i].style.backgroundColor=CardDesignLight;
+        DeckCollection[i].classList.add("deck_t2");
+        DeckCollection[i].classList.remove("deck_t1");
+        }
+            for (var i = 0; i < StyleHeadings.length; i++) {
+                 StyleHeadings[i].style.color = "black"; 
+                
+                }
+            document.getElementById("username").style.color="red";
+            document.getElementById("welcome").style.backgroundImage = "linear-gradient(to right,oldLace,OldLace)";
+              document.getElementById("skill").classList.remove("skill_glow");
+        }
+      
+        else {theme_node.textContent="Light";
+        document.body.style.backgroundImage=backgroundDark;
+        for(var i=0;i<DeckCollection.length;i++){
+            //DeckCollection[i].style.backgroundColor=CardDesignDark;
+            DeckCollection[i].classList.add("deck_t1");
+            DeckCollection[i].classList.remove("deck_t2");
+        }
+        
+        for (var i = 0; i < StyleHeadings.length; i++) { StyleHeadings[i].style.color = "azure"; 
+           
+        }
+         document.getElementById("username").style.color = "deepskyblue";
+            document.getElementById("welcome").style.backgroundImage = 'linear-gradient(to right, rgba(23, 32, 41, 0.799), rgba(192, 255, 241, 0.432))';
+          document.getElementById("skill").classList.add("skill_glow");
+    }
+
+    }
+)
+//image effects
+    var certifications = document.getElementsByClassName("Certification");
+    for (var i = 0; i < certifications.length; i++) {
+        certifications[i].addEventListener("mouseover", function show(){
+             setTimeout(() => {    
+                this.style.width = 30 + "%"
+                this.style.height = "auto"
+                this.style.boxShadow = "5px 5px 10px 10px rgba(255,255,250,0.5)";
+               // this.style.position="absolute";
+               // this.style.left=0+"%";
+                //this.style.top=50+"%"
+                //this.style.translate="transform(-50%,-50%)"
+
+
+            },100)}
+        
+        )
+    } for (var i = 0; i < certifications.length; i++) {
+            certifications[i].addEventListener("mouseleave", function placeback() {
+
+          setTimeout( ()=>{      this.style.width = 25 + "%"
+                this.style.height = "auto"
+                this.style.position="relative"
+                this.style.left = "";
+                this.style.top = ""
+                this.style.translate = ""
+                this.style.boxShadow='';
+
+            },100)}
+
+            )
+        }
 </script>
+
 </body>
+
 </html>
